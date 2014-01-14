@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <ul>
+        <p>
+            <li>Marca: {{ object.institucion }}</li>
+        </p>
+        <p>
+            <li>Fecha de registro: {{ object.fecha_registro }}</li>
+        </p>
+    </ul>
+    <ul>
+        {% if perms.vehiculos.change_institucion %}
+            <a href='{% url "institucion_modificar" object.id %}' class="btn">Modificar</a>
+        {% endif %}
+        {% if perms.vehiculos.delete_institucion %}
+            <a href='{% url "institucion_eliminar" object.id %}' class="btn">Eliminar</a>
+        {% endif %}
+    </ul>
+{% endblock %}

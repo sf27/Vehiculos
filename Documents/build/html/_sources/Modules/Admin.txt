@@ -1,0 +1,6 @@
+:mod:`vehiculos.admin` - Admin
+===============================
+.. automodule:: vehiculos.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <blockquote>
+      <p>Lista de vehiculos registrados.</p>
+    </blockquote>
+    {% load thumbnail %}
+    <ul>
+        {% for dato in object_list %}
+            <table class="table table-striped table-hover">
+            <tr>
+                <td>
+                    Placa: {{ dato.placas }}
+                </td>
+                <td>
+                    Marca: {{ dato.marca }}
+                </td>
+                <td>
+                    <img src="{{ dato.imagen |thumbnail_url:'pequenyo' }}" alt="" class="img-rounded"/>
+                </td>
+                <td>
+                    <a href='{% url "vehiculo_detalles" dato.id %}' class="btn">Detalles</a>
+                </td>
+            </tr>
+            </table>
+        {% empty %}
+            <li>
+                Aún no hay vehiculos registrados
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>vehiculos.views.Vehiculo &mdash; CONVE 0.01 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="CONVE 0.01 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">CONVE 0.01 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for vehiculos.views.Vehiculo</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">vehiculos.models</span> <span class="kn">import</span> <span class="n">Vehiculo</span>
+<span class="kn">from</span> <span class="nn">django.views.generic.edit</span> <span class="kn">import</span> <span class="n">CreateView</span><span class="p">,</span> <span class="n">UpdateView</span><span class="p">,</span> <span class="n">DeleteView</span>
+<span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">DetailView</span><span class="p">,</span> <span class="n">ListView</span>
+<span class="kn">from</span> <span class="nn">django.core.urlresolvers</span> <span class="kn">import</span> <span class="n">reverse_lazy</span>
+<span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">timezone</span>
+
+
+<div class="viewcode-block" id="VehiculoDetailView"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoDetailView">[docs]</a><span class="k">class</span> <span class="nc">VehiculoDetailView</span><span class="p">(</span><span class="n">DetailView</span><span class="p">):</span>
+
+    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Vehiculo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<div class="viewcode-block" id="VehiculoDetailView.get_object"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoDetailView.get_object">[docs]</a>    <span class="k">def</span> <span class="nf">get_object</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># Call the superclass</span>
+        <span class="nb">object</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">VehiculoDetailView</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">get_object</span><span class="p">()</span>
+        <span class="c"># Record the last accessed date</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">last_accessed</span> <span class="o">=</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="nb">object</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="c"># Return the object</span>
+        <span class="k">return</span> <span class="nb">object</span>
+</div></div>
+<div class="viewcode-block" id="VehiculoCreate"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoCreate">[docs]</a><span class="k">class</span> <span class="nc">VehiculoCreate</span><span class="p">(</span><span class="n">CreateView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Vehiculo</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s">&#39;vehiculos_registrados&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="VehiculoUpdate"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoUpdate">[docs]</a><span class="k">class</span> <span class="nc">VehiculoUpdate</span><span class="p">(</span><span class="n">UpdateView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Vehiculo</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s">&#39;vehiculos_registrados&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="VehiculoDelete"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoDelete">[docs]</a><span class="k">class</span> <span class="nc">VehiculoDelete</span><span class="p">(</span><span class="n">DeleteView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Vehiculo</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s">&#39;vehiculos_registrados&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="VehiculoListView"><a class="viewcode-back" href="../../../Modulos/vehiculos.views.html#vehiculos.views.Vehiculo.VehiculoListView">[docs]</a><span class="k">class</span> <span class="nc">VehiculoListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Vehiculo</span>      <span class="c"># shorthand for setting queryset = models.Car.objects.all()</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s">&#39;vehiculo_list.html&#39;</span>  <span class="c"># optional (the default is app_name/modelNameInLowerCase_list.html; which will look into your templates folder for that path and file)</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c">#and that&#39;s it !!</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../../../index.html">CONVE 0.01 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Elio Rincón.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

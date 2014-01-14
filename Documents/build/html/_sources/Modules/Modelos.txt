@@ -1,0 +1,6 @@
+:mod:`vehiculos.models` - Modelos de la aplicación
+===================================================
+.. automodule:: vehiculos.models
+    :members:
+    :undoc-members:
+    :show-inheritance:

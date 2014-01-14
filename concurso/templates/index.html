@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    {% load thumbnail %}
+    <img src="{{ datos.dato.imagen|thumbnail_url:'avatar' }}" alt=""/>
+    {% for dato in vehiculos %}
+        <li>
+            Placa: {{ dato.placas }}
+            <img src="{{ dato.imagen |thumbnail_url:'pequenyo' }}" alt=""/>
+        </li>
+    {% empty %}
+        <li>Aún no hay vehiculos registrados</li>
+    {% endfor %}
+{% endblock %}

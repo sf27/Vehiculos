@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>vehiculos.models - Modelos de la aplicación &mdash; CONVE 0.01 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.01',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="CONVE 0.01 documentation" href="../index.html" />
+    <link rel="next" title="vehiculos.views - Marca" href="Marca.html" />
+    <link rel="prev" title="Welcome to CONVE’s documentation!" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Marca.html" title="vehiculos.views - Marca"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to CONVE’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">CONVE 0.01 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vehiculos-models-modelos-de-la-aplicacion">
+<h1><a class="reference internal" href="../ttt/vehiculos.html#module-vehiculos.models" title="vehiculos.models"><tt class="xref py py-mod docutils literal"><span class="pre">vehiculos.models</span></tt></a> - Modelos de la aplicación<a class="headerlink" href="#vehiculos-models-modelos-de-la-aplicacion" title="Permalink to this headline">¶</a></h1>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/elio/PycharmProjects/concurso_env/env_concurso/Documents/source/Modules/Modelos.rst</tt>, line 3)</p>
+autodoc: failed to import attribute u&#8217;Vehiculo.imagen&#8217; from module u&#8217;vehiculos.models&#8217;; the following exception was raised:
+Traceback (most recent call last):
+  File &#8220;/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py&#8221;, line 333, in import_object
+    obj = self.get_attr(obj, part)
+  File &#8220;/usr/local/lib/python2.7/dist-packages/sphinx/ext/autodoc.py&#8221;, line 232, in get_attr
+    return safe_getattr(obj, name, *defargs)
+  File &#8220;/usr/local/lib/python2.7/dist-packages/sphinx/util/inspect.py&#8221;, line 78, in safe_getattr
+    raise AttributeError(name)
+AttributeError: imagen
+</div>
+<span class="target" id="module-vehiculos.models"></span><dl class="class">
+<dt id="vehiculos.models.Institucion">
+<em class="property">class </em><tt class="descclassname">vehiculos.models.</tt><tt class="descname">Institucion</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/vehiculos/models.html#Institucion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vehiculos.models.Institucion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Institucion(id, institucion, fecha_registro)</p>
+<dl class="exception">
+<dt id="vehiculos.models.Institucion.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#vehiculos.models.Institucion.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vehiculos.models.Institucion.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">Institucion.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#vehiculos.models.Institucion.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Institucion.get_next_by_fecha_registro">
+<tt class="descclassname">Institucion.</tt><tt class="descname">get_next_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Institucion.get_next_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Institucion.get_previous_by_fecha_registro">
+<tt class="descclassname">Institucion.</tt><tt class="descname">get_previous_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Institucion.get_previous_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Institucion.objects">
+<tt class="descclassname">Institucion.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x43a5190&gt;</em><a class="headerlink" href="#vehiculos.models.Institucion.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Institucion.vehiculo_set">
+<tt class="descclassname">Institucion.</tt><tt class="descname">vehiculo_set</tt><a class="headerlink" href="#vehiculos.models.Institucion.vehiculo_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="vehiculos.models.Marca">
+<em class="property">class </em><tt class="descclassname">vehiculos.models.</tt><tt class="descname">Marca</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/vehiculos/models.html#Marca"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vehiculos.models.Marca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Marca(id, marca, fecha_registro)</p>
+<dl class="exception">
+<dt id="vehiculos.models.Marca.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#vehiculos.models.Marca.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vehiculos.models.Marca.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">Marca.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#vehiculos.models.Marca.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Marca.get_next_by_fecha_registro">
+<tt class="descclassname">Marca.</tt><tt class="descname">get_next_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Marca.get_next_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Marca.get_previous_by_fecha_registro">
+<tt class="descclassname">Marca.</tt><tt class="descname">get_previous_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Marca.get_previous_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Marca.objects">
+<tt class="descclassname">Marca.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x414eed0&gt;</em><a class="headerlink" href="#vehiculos.models.Marca.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Marca.vehiculo_set">
+<tt class="descclassname">Marca.</tt><tt class="descname">vehiculo_set</tt><a class="headerlink" href="#vehiculos.models.Marca.vehiculo_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="vehiculos.models.Vehiculo">
+<em class="property">class </em><tt class="descclassname">vehiculos.models.</tt><tt class="descname">Vehiculo</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/vehiculos/models.html#Vehiculo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#vehiculos.models.Vehiculo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Vehiculo(id, placas, modelo, anyo, marca_id, institucion_id, fecha_vencimiento, imagen, fecha_registro)</p>
+<dl class="exception">
+<dt id="vehiculos.models.Vehiculo.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#vehiculos.models.Vehiculo.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="vehiculos.models.Vehiculo.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">Vehiculo.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#vehiculos.models.Vehiculo.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Vehiculo.get_next_by_fecha_registro">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">get_next_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Vehiculo.get_next_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Vehiculo.get_next_by_fecha_vencimiento">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">get_next_by_fecha_vencimiento</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Vehiculo.get_next_by_fecha_vencimiento" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Vehiculo.get_previous_by_fecha_registro">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">get_previous_by_fecha_registro</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Vehiculo.get_previous_by_fecha_registro" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vehiculos.models.Vehiculo.get_previous_by_fecha_vencimiento">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">get_previous_by_fecha_vencimiento</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#vehiculos.models.Vehiculo.get_previous_by_fecha_vencimiento" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Vehiculo.institucion">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">institucion</tt><a class="headerlink" href="#vehiculos.models.Vehiculo.institucion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Vehiculo.marca">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">marca</tt><a class="headerlink" href="#vehiculos.models.Vehiculo.marca" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="vehiculos.models.Vehiculo.objects">
+<tt class="descclassname">Vehiculo.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x43a5950&gt;</em><a class="headerlink" href="#vehiculos.models.Vehiculo.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to CONVE&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Marca.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">vehiculos.views</span></tt> - Marca</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/Modules/Modelos.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Marca.html" title="vehiculos.views - Marca"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to CONVE’s documentation!"
+             >previous</a> |</li>
+        <li><a href="../index.html">CONVE 0.01 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Elio Rincón.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

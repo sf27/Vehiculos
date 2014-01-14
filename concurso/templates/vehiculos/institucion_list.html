@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <blockquote>
+      <p>Lista de instituciones registradas.</p>
+    </blockquote>
+    <ul>
+        {% for dato in object_list %}
+            <table class="table table-striped table-hover">
+            <tr>
+                <td>
+                    Institución: {{ dato.institucion }}
+                </td>
+                <td>
+                    <a href='{% url "institucion_detalles" dato.id %}' class="btn">
+                        Detalles
+                    </a>
+                </td>
+            </tr>
+            </table>
+        {% empty %}
+            <li>
+                Aún no hay instituciones registradas
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

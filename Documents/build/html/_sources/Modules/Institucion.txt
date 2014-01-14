@@ -1,0 +1,6 @@
+:mod:`vehiculos.views` - Institucion
+=====================================
+.. automodule:: vehiculos.views.Institucion
+   :members:
+   :undoc-members:
+   :show-inheritance:

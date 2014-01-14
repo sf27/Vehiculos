@@ -1,0 +1,5 @@
+:mod:`concurso.urls` - Urls
+===============================
+.. automodule:: concurso.urls
+   :undoc-members:
+   :show-inheritance:

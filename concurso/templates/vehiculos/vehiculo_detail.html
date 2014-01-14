@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <ul>
+        <h1>
+            <li>Placa: {{ object.placas }}</li>
+        </h1>
+        <p>
+            <li>Modelo: {{ object.modelo }}</li>
+        </p>
+        <p>
+            <li>Año: {{ object.anyo }}</li>
+        </p>
+        <p>
+            <li>Marca: {{ object.marca }}</li>
+        </p>
+        <p>
+            <li>Institución: {{ object.institucion }}</li>
+        </p>
+        <p>
+        <li>Fecha de vencimiento: {{ object.fecha_vencimiento }}</li>
+        </p>
+        {% load thumbnail %}
+        <td><img src="{{ object.imagen |thumbnail_url:'grande' }}" alt="" class="img-rounded"/></td>
+    </ul>
+    <ul>
+        {% if perms.vehiculos.change_vehiculo %}
+            <a href='{% url "vehiculo_modificar" object.id %}' class="btn">Modificar</a>
+        {% endif %}
+        {% if perms.vehiculos.delete_vehiculo %}
+            <a href='{% url "vehiculo_eliminar" object.id %}' class="btn">Eliminar</a>
+        {% endif %}
+    </ul>
+{% endblock %}

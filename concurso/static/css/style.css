@@ -1,0 +1,33 @@
+*{
+	border:0;
+	margin: 0;
+	padding: 0;	
+}
+
+article, figcaption, figure, footer,  header, hgroup, nav, section {
+	display: block;
+}
+
+@font-face {
+	font-family: "Chalet";
+	src: url("../fonts/Chalet/Chalet.eot");
+	src: url("../fonts/Chalet/Chalet.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/Chalet/Chalet.woff") format("woff"),
+		 url("../fonts/Chalet/Chalet.ttf") format("truetype"),
+		 url("../fonts/Chalet/Chalet.svg#Chalet") format("svg");
+	font-weight: normal;
+	font-style: normal;	
+}
+/*1em=16px=12pts*/
+
+body{
+	/*background: #3399CC url("../img/3.png");*/
+	background: #FFFFFF;
+	color: #6F7177;
+	font-family: "droid_serifregular", "Chalet", Helvetica, Verdana;/*Fuente no segura debe ir entre comillas*/
+	font-size: 1em;/*1em=16px=12pts*/
+}
+
+section#contenido{
+    margin: 0 auto;
+}
